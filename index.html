@@ -1,330 +1,75 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mercurian Studios — Stories, engineered.</title>
+<meta name="description" content="Dave Mercuri is a producer, writer, and director in Denver. Twenty years of aerospace program management, now applied to film sets.">
+<meta property="og:title" content="Mercurian Studios — Stories, engineered.">
+<meta property="og:description" content="Dave Mercuri is a producer, writer, and director in Denver. Twenty years of aerospace program management, now applied to film sets.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#121110">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Geist:wght@500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--cream:#F5FAE8;--pale:#E1F5C4;--lemon:#EDE574;--yellow:#F9D423;--amber:#FC913A;--red:#FF4E50;--navy:#3B1215;--orange:#FF4E50;--carbon:#2A0F11;--hair:rgba(59,18,21,.20);--hairD:rgba(245,250,232,.26);--ink:rgba(59,18,21,.70);--inkD:rgba(245,250,232,.70);--gradsoft:radial-gradient(120% 105% at 6% 4%,#E1F5C4 0%,rgba(225,245,196,0) 52%),radial-gradient(95% 95% at 80% 8%,#EDE574 0%,rgba(237,229,116,0) 58%),radial-gradient(115% 105% at 96% 56%,#F9D423 0%,rgba(249,212,35,0) 54%),radial-gradient(105% 105% at 26% 96%,#FC913A 0%,rgba(252,145,58,0) 58%),linear-gradient(150deg,#FF4E50,#FF4E50);--gradhot:linear-gradient(168deg,#F9D423 0%,#FC913A 46%,#FF4E50 100%);--gut:76px;--disp:"Anton","Haettenschweiler",Impact,sans-serif;--serif:"Source Serif 4",Georgia,"Times New Roman",serif;--brand:"Geist",-apple-system,"Helvetica Neue",Arial,sans-serif;--mono:"Geist Mono",ui-monospace,"SF Mono",monospace}
-*{box-sizing:border-box}
-html{-webkit-font-smoothing:antialiased}
-body{margin:0;background:var(--cream);color:var(--navy);font-family:var(--serif);font-size:20px;line-height:1.55;text-wrap:pretty;overflow-x:hidden}
-.disp{font-family:var(--disp);font-weight:400;text-transform:uppercase;letter-spacing:.004em}
-a{color:var(--navy);text-decoration:none;border-bottom:2px solid var(--orange)}
-a:hover{color:var(--orange)}
-.onNavy a{color:var(--cream)}
-.onNavy a:hover{color:var(--orange)}
-
-/* ---------- margin device ---------- */
-.sec{display:grid;grid-template-columns:var(--gut) 1fr;position:relative}
-.gut{border-right:2px solid var(--navy);padding:30px 0 44px;display:flex;flex-direction:column;align-items:center;gap:22px;position:relative;z-index:2}
-.onNavy .gut{border-right-color:var(--cream)}
-.gnum{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;background:var(--orange);color:var(--carbon);padding:4px 7px;line-height:1}
-.gnote{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap}
-.onNavy .gnote{color:var(--inkD)}
-.dots{width:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
-.dots i{display:block;aspect-ratio:1;border-radius:50%;background:var(--orange)}
-.pad{padding:60px 64px 84px 44px;position:relative;z-index:2}
-.meas{max-width:66ch}
-
-/* ---------- pixel cursor ---------- */
-.cur{display:block;shape-rendering:crispEdges;flex:none}
-
-/* ---------- nav ---------- */
-header{position:sticky;top:0;z-index:30;background:var(--navy);color:var(--cream)}
-header a{border-bottom:none;color:var(--cream)}
-header a:hover{color:var(--orange)}
-.navrow{display:grid;grid-template-columns:var(--gut) 1fr;align-items:stretch}
-.navrow .gut{padding:0;justify-content:center;gap:0;border-right-color:var(--cream)}
-.navin{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:18px 28px 18px 44px}
-.lock{display:flex;align-items:center;gap:13px}
-.lockname{font-family:var(--brand);font-weight:600;font-size:17px;letter-spacing:-.024em;line-height:1}
-nav a,.lede,.sub,.step p,.crew,.fitcol p{font-family:var(--serif)}
-nav{display:flex;align-items:center;gap:32px}
-nav a{font-size:15px;font-weight:500}
-.cta{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;background:var(--orange);color:var(--carbon)!important;padding:12px 18px}
-.cta:hover{background:var(--cream);color:var(--navy)!important}
-
-/* ---------- hero ---------- */
-.hero{overflow:hidden}
-.hero .pad{padding:76px 64px 0 44px}
-.hfig .harc{position:absolute;left:0;bottom:0;width:min(680px,62%);height:340px;background:var(--orange);border-radius:340px 340px 0 0;z-index:0}
-.hcurs{position:absolute;right:8%;bottom:40px;display:flex;flex-direction:column;gap:20px;align-items:flex-end;z-index:3}
-.hbars{position:absolute;top:64px;right:0;width:300px;display:flex;flex-direction:column;gap:16px;z-index:1}
-.hbars i{display:block;height:26px;background:var(--navy)}
-.hbars i:last-child{width:74%}
-.hdots{position:absolute;top:78px;left:44px;width:120px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;z-index:1}
-.hdots i{display:block;aspect-ratio:1;border-radius:50%;background:var(--orange)}
-h1{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(58px,10.4vw,166px);line-height:.9;letter-spacing:-.008em;margin:150px 0 0;position:relative;z-index:3}
-h1 span{display:inline-block;transform:skewX(-7deg)}
-h1 em{font-style:normal;color:var(--orange)}
-.sub{font-size:23px;line-height:1.45;max-width:31ch;margin:36px 0 0;font-weight:400;position:relative;z-index:3}
-.btns{display:flex;gap:14px;margin:44px 0 0;flex-wrap:wrap;align-items:center;position:relative;z-index:3}
-.btn{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:16px 24px;background:var(--navy);color:var(--cream)!important;border-bottom:none}
-.btn:hover{background:var(--orange);color:var(--carbon)!important}
-.btn.alt{background:var(--cream);color:var(--navy)!important;box-shadow:inset 0 0 0 2px var(--navy)}
-.btn.alt:hover{background:var(--navy);color:var(--cream)!important}
-.hfig{position:relative;z-index:2;margin:56px 0 0;height:420px}
-.hfig .ph{position:absolute;left:70px;bottom:0;width:min(480px,50%);height:420px;z-index:1}
-
-/* ---------- proof strip ---------- */
-.strip{background:var(--navy);color:var(--cream)}
-.strip .pad{padding:24px 64px 24px 44px}
-.strip .gut{padding:24px 0;border-right-color:var(--cream)}
-.proof{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:9px 16px;align-items:center}
-.proof b{color:var(--orange);font-weight:500}
-
-/* ---------- section heads ---------- */
-.eyebrow{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin:0 0 22px}
-h2{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(38px,4.8vw,74px);line-height:.94;letter-spacing:.002em;margin:0}
-h2 em{font-style:normal;color:var(--orange)}
-.lede{font-size:22px;line-height:1.5;margin:26px 0 0}
-.rule{height:6px;background:var(--navy);margin:0}
-.onNavy .rule{background:var(--cream)}
-
-/* ---------- work cards ---------- */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
-.card{display:block;border-bottom:none}
-.cwrap{position:absolute;inset:0;z-index:0}
-.card .phwrap{position:relative;padding-top:46px}
-.card .arc{position:absolute;top:0;left:6%;right:6%;height:190px;background:var(--orange);border-radius:220px 220px 0 0;z-index:0}
-.card .ph{position:relative;z-index:1;aspect-ratio:4/3}
-.slate{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);display:grid;grid-template-columns:1fr auto;gap:5px 12px;padding-top:12px;border-top:2px solid var(--navy);margin-top:14px}
-.slate b{font-weight:500;color:var(--navy)}
-.ctitle{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:30px;letter-spacing:.004em;line-height:1;margin:14px 0 0}
-.card:hover .ctitle{color:var(--orange)}
-.ph{background:repeating-linear-gradient(135deg,#c9c9c9 0 7px,#b4b4b4 7px 14px);position:relative;overflow:hidden;filter:grayscale(1)}
-.ph .tag{position:absolute;top:9px;left:11px;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#2b2b2b;background:rgba(255,255,255,.72);padding:3px 6px}
-.ph .tag.b{top:auto;bottom:9px;left:auto;right:11px}
-.crew{margin-top:46px;padding-top:24px;border-top:2px solid var(--navy);font-size:20px;max-width:60ch;display:flex;gap:16px;align-items:flex-start}
-
-/* ---------- method ---------- */
-.method{background:var(--navy);color:var(--cream);overflow:hidden}
-.marc{position:absolute;right:-90px;top:60px;width:420px;height:210px;background:var(--orange);border-radius:210px 210px 0 0;transform:rotate(180deg);z-index:0}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
-.step{background:var(--cream);color:var(--navy);padding:26px 24px 30px}
-.stepn{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;background:var(--orange);color:var(--carbon);padding:4px 7px}
-.step h3{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:32px;letter-spacing:.004em;line-height:1;margin:18px 0 12px}
-.step p{margin:0;font-size:18px;line-height:1.5}
-
-/* ---------- bio ---------- */
-.bio{display:grid;grid-template-columns:330px 1fr;gap:56px;align-items:start}
-.portwrap{position:relative;padding-top:34px}
-.portwrap .arc{position:absolute;top:0;left:0;right:0;height:170px;background:var(--orange);border-radius:180px 180px 0 0;z-index:0}
-.portwrap .ph{position:relative;z-index:1;aspect-ratio:4/5}
-.creds{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);line-height:2.1;margin-top:30px;border-top:2px solid var(--navy);padding-top:18px}
-
-/* ---------- fit ---------- */
-.fit{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
-.fitcol{padding:26px 26px 30px;background:var(--navy);color:var(--cream)}
-.fitcol+.fitcol{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
-.fitlab{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:10px}
-.fitcol p{font-size:25px;line-height:1.32;letter-spacing:0;margin:16px 0 0;max-width:26ch}
-
-/* ---------- contact ---------- */
-.contact{background:var(--orange);color:var(--carbon);overflow:hidden}
-.contact .gut{border-right-color:var(--carbon)}
-.contact .gnum{background:var(--navy);color:var(--cream)}
-.contact .gnote{color:rgba(14,14,14,.68)}
-.contact .dots i{background:var(--navy)}
-.contact .eyebrow{color:var(--navy)}
-.contact .pad{padding:80px 64px 60px 44px}
-.cbars{position:absolute;top:80px;right:0;width:280px;display:flex;flex-direction:column;gap:14px;z-index:1}
-.cbars i{display:block;height:24px;background:var(--navy)}
-.cbars i:last-child{width:70%}
-.cbig{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(38px,5.4vw,82px);line-height:.92;letter-spacing:.004em;margin:0;max-width:17ch;position:relative;z-index:3}
-.crow{display:flex;gap:32px;flex-wrap:wrap;align-items:center;margin-top:44px;position:relative;z-index:3}
-.contact .btn{background:var(--navy);color:var(--cream)!important}
-.contact .btn:hover{background:var(--carbon)}
-.mailto{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border-bottom:2px solid var(--navy)}
-footer{display:grid;grid-template-columns:var(--gut) 1fr;background:var(--navy);color:var(--inkD)}
-footer .gut{padding:0;border-right-color:var(--cream)}
-.fin{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:24px 64px 26px 44px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
-
-/* ---------- load motion ---------- */
-@keyframes drawdown{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-@keyframes setin{from{opacity:0}to{opacity:1}}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-@keyframes pop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
-.hero .gut{overflow:hidden}
-.hero .gut::before{content:"";position:absolute;top:0;right:-2px;width:2px;height:100%;background:var(--cream);transform-origin:top;animation:drawdown .5s cubic-bezier(.6,0,.2,1) both}
-.hero .gnum,.hero .gnote,.hero .dots{animation:setin .4s ease .44s both}
-h1{animation:rise .6s cubic-bezier(.2,.7,.2,1) .28s both}
-.hero .sub{animation:rise .58s cubic-bezier(.2,.7,.2,1) .5s both}
-.hero .btns{animation:rise .58s cubic-bezier(.2,.7,.2,1) .62s both}
-.harc,.hbars,.hdots{animation:pop .7s cubic-bezier(.2,.8,.2,1) .16s both}
-.rv{transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
-.rv.armed{opacity:0;transform:translateY(14px)}
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.rv.armed{opacity:1;transform:none}}
-
-/* ---------- responsive ---------- */
-@media(max-width:900px){
-:root{--gut:0px}
-.sec,.navrow,footer{grid-template-columns:1fr}
-.gut{border-right:none;border-bottom:2px solid var(--navy);flex-direction:row;justify-content:flex-start;padding:12px 20px;gap:14px}
-.onNavy .gut,.strip .gut,footer .gut{border-bottom-color:var(--cream)}
-.contact .gut{border-bottom-color:var(--carbon)}
-.navrow .gut{display:none}
-.gnote{writing-mode:horizontal-tb;transform:none}
-.dots{width:26px;gap:4px}
-.pad,.contact .pad,.strip .pad{padding:40px 20px 52px}
-.navin{padding:15px 20px}
-nav{display:none}
-.hero .pad{padding:44px 20px 0}
-h1{font-size:clamp(46px,15vw,80px);margin-top:96px}
-.hfig .harc{left:0;width:88%;height:230px;border-radius:230px 230px 0 0}
-.hcurs{right:2%;bottom:16px;gap:12px}
-.hcurs svg:first-child{width:34px;height:41px}
-.hcurs svg:nth-child(2){width:22px;height:26px}
-.hcurs svg:nth-child(3){display:none}
-.hbars{width:150px;top:40px;gap:10px}
-.hbars i{height:16px}
-.hdots{width:74px;gap:11px;top:48px;left:20px}
-.sub{font-size:19px;max-width:none}
-.hfig{height:280px;margin-top:36px}
-.hfig .ph{width:70%;left:26px;height:280px}
-.proof{flex-direction:column;align-items:flex-start;gap:8px;font-size:11px}
-.cards{grid-template-columns:1fr;gap:38px}
-.steps,.fit,.bio{grid-template-columns:1fr}
-.fitcol p{font-size:22px;max-width:none}
-.bio{gap:30px}
-.marc{width:230px;height:115px;right:-60px;border-radius:115px 115px 0 0}
-.cbars{width:140px;top:44px;gap:10px}
-.cbars i{height:16px}
-.fin{padding:20px}
-.band .ph{aspect-ratio:4/3}
-.hero .gut::before{display:none}
-}
-
-/* ---------- palette v3: gradients + grain ---------- */
-.hero{background:var(--gradsoft);position:relative}
-.hero::after{content:"";position:absolute;inset:0;background:url("assets/grain.png") repeat;background-size:128px 128px;opacity:.10;pointer-events:none;z-index:1}
-.hero h1 em{color:var(--navy)}
-.hero h1 em span{background:var(--pale);padding:0 .1em .04em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.hfig .harc{background:var(--gradhot)}
-.hbars i{background:var(--carbon)}
-.hdots i,.dots i{background:var(--red)}
-.gnum{background:var(--yellow);color:var(--carbon)}
-.strip{background:var(--navy)}
-.proof b{color:var(--yellow)}
-.onNavy .eyebrow{color:var(--yellow)}
-.card .arc{background:var(--gradhot)}
-.portwrap .arc{background:var(--gradhot)}
-.card:hover .ctitle{color:var(--red)}
-.method{background:var(--navy)}
-.marc{background:var(--gradhot)}
-.method h2 em{color:var(--yellow)}
-.step{background:var(--pale)}
-.stepn{background:var(--red);color:var(--cream)}
-.fitcol{background:var(--gradhot);color:var(--carbon)}
-.fitcol .fitlab{color:var(--carbon)}
-.fitcol .dots i{background:var(--carbon)}
-.fitcol+.fitcol{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
-.contact{background:var(--gradsoft);color:var(--carbon);position:relative}
-.contact::after{content:"";position:absolute;inset:0;background:url("assets/grain.png") repeat;background-size:128px 128px;opacity:.10;pointer-events:none;z-index:1}
-.contact .eyebrow{color:var(--navy)}
-.contact .cbars i{background:var(--carbon)}
-.contact .dots i{background:var(--carbon)}
-.contact .gnum{background:var(--carbon);color:var(--cream)}
-.contact .btn{background:var(--carbon);color:var(--cream)!important}
-.contact .btn:hover{background:var(--cream);color:var(--carbon)!important}
-.contact .mailto{border-bottom-color:var(--carbon);color:var(--carbon)}
-.contact .mailto:hover{color:var(--carbon);border-bottom-width:4px}
-a:focus-visible,.btn:focus-visible,.cta:focus-visible,.card:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
-.onNavy a:focus-visible,.strip a:focus-visible,header a:focus-visible,.method a:focus-visible{outline-color:var(--yellow)}
-footer{background:var(--navy)}
-
-/* ---------- photography: duotone treatment ---------- */
-.ph.duo{background:var(--navy);filter:none}
-.ph.duo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.ph.duo .tag{z-index:3;background:rgba(59,18,21,.72);color:var(--cream)}
-.hfig .ph.duo{filter:none}
-.portwrap .ph.duo img{object-position:50% 18%}
-.band .ph.duo img{object-position:50% 42%}
-.band{margin:44px 0 0;position:relative}
-.band .ph{aspect-ratio:16/7}
-.setgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:58px}
-.setgrid .ph{aspect-ratio:1/1}
-.setcap{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--cream);opacity:.7;margin-top:14px}
-@media(max-width:820px){.setgrid{grid-template-columns:repeat(2,1fr);gap:10px}}
-.card .ph.duo img{object-position:50% 12%}
-.playmark{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:rgba(59,18,21,.6);border:2px solid var(--cream);display:grid;place-items:center;transition:background .2s,transform .2s}
-.playmark::after{content:"";width:0;height:0;border-left:16px solid var(--cream);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
-.card:hover .playmark{background:var(--red);transform:translate(-50%,-50%) scale(1.06)}
-.lb{position:fixed;inset:0;z-index:200;background:rgba(20,8,10,.92);display:none;place-items:center;padding:32px}
-.lb[open]{display:grid}
-.lb .frame{width:min(1100px,100%);aspect-ratio:16/9;position:relative;background:#000}
-.lb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.lb .x{position:absolute;top:-40px;right:0;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cream);background:none;border:0;cursor:pointer;padding:6px}
-.lb .x:hover{color:var(--yellow)}
-.band figcaption{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);padding-top:12px;border-top:2px solid var(--navy);margin-top:14px}
-
-/* ---------- constellation grounds ---------- */
-.strip,.method,footer{position:relative}
-.strip>*,.method>*,footer>*{position:relative;z-index:2}
-.strip::before,.method::before,footer::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-repeat:no-repeat;background-position:center;background-size:cover}
-.strip::before{background-image:url("assets/constellation-cream.png");opacity:.34;background-position:70% 50%}
-.method::before{background-image:url("assets/constellation-cream.png");opacity:.34;background-position:20% 40%}
-footer::before{background-image:url("assets/constellation-cream.png");opacity:.26;background-position:40% 60%}
-.contact::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url("assets/constellation-ink.png") no-repeat center/cover;opacity:.22}
-</style></head>
+<link rel="stylesheet" href="assets/site.css">
+</head>
 <body>
-
 <header>
 <div class="navrow"><div class="gut"><svg class="cur" width="20" height="24" viewBox="0 0 10 12" aria-hidden="true"><g fill="#F5FAE8"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg></div>
 <div class="navin">
-<a class="lock" href="#" aria-label="Mercurian Studios — home">
+<a class="lock" href="index.html" aria-label="Mercurian Studios — home">
 <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true" style="display:block;overflow:visible"><path d="M 35 165 L 35 55 Q 35 35 55 35 Q 100 35 100 120 Q 100 35 145 35 Q 165 35 165 55 L 165 165" fill="none" stroke="#F5FAE8" stroke-width="14" stroke-linecap="square"/><circle cx="185" cy="100" r="5.4" fill="#FF4E50"/></svg>
 <span class="lockname">mercurian studios</span></a>
-<nav><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
-<a class="cta" href="#contact">Work with me</a>
+<nav id="nav"><a href="index.html#work" aria-current="page">Work</a><a href="about.html">About</a><a href="services.html">Services</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a><a class="cta mobonly" href="contact.html">Work with me</a></nav>
+<button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><i></i></button>
+<a class="cta" href="contact.html">Work with me</a>
 </div></div>
 </header>
 
 <!-- 01 HERO -->
-<section class="sec hero" data-screen-label="01 Hero">
+<section class="sec hero">
 <div class="gut"><span class="gnum">01</span><span class="gnote">stories, engineered.</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
 <div class="pad">
 <div class="hdots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <div class="hbars"><i></i><i></i><i></i></div>
 <h1><span>Stories,</span><br><em><span>engineered.</span></em></h1>
 <p class="sub">I'm Dave Mercuri, a producer, writer, and director in Denver. I spent twenty years running aerospace programs where failure wasn't an option. Now I bring that to sets, where it mostly still isn't.</p>
-<div class="btns"><a class="btn" href="#work">See the work</a><a class="btn alt" href="#contact">Work with me</a>
-<svg class="cur" width="30" height="36" viewBox="0 0 10 12" aria-hidden="true"><g fill="#3B1215"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg>
+<div class="btns"><a class="btn" href="#work">See the work</a><a class="btn alt" href="contact.html">Work with me</a>
+<svg class="cur" width="30" height="36" viewBox="0 0 10 12" aria-hidden="true"><g fill="#121110"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg>
 </div>
-<div class="hfig"><div class="harc"></div><div class="hcurs"><svg class="cur" width="56" height="67" viewBox="0 0 10 12" aria-hidden="true"><g fill="#3B1215"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg><svg class="cur" width="34" height="41" viewBox="0 0 10 12" aria-hidden="true"><g fill="#F5FAE8"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg><svg class="cur" width="22" height="26" viewBox="0 0 10 12" aria-hidden="true"><g fill="#3B1215"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg></div><div class="ph duo"><img src="assets/photos/qa-directing-duo.jpg" width="900" height="675" decoding="async" alt="Dave Mercuri speaking with a microphone during a filmmaker Q&amp;A"/><span class="tag">emerging filmmaker project q&amp;a · denver</span></div></div>
+<div class="hfig"><div class="harc"></div><div class="hcurs"><svg class="cur" width="56" height="67" viewBox="0 0 10 12" aria-hidden="true"><g fill="#121110"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg><svg class="cur" width="34" height="41" viewBox="0 0 10 12" aria-hidden="true"><g fill="#F5FAE8"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg><svg class="cur" width="22" height="26" viewBox="0 0 10 12" aria-hidden="true"><g fill="#121110"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg></div><div class="ph duo"><img src="assets/photos/dave-portrait-dark.webp" width="1122" height="1402" decoding="async" alt="Portrait of Dave Mercuri"/><span class="tag">dave mercuri · denver</span></div></div>
 </div>
 </section>
 
 <div class="rule"></div>
 
 <!-- 02 PROOF STRIP -->
-<section class="sec strip onNavy" data-screen-label="02 Proof strip">
+<section class="sec strip onNavy">
 <div class="gut"><span class="gnum">02</span></div>
 <div class="pad"><div class="proof"><b>PMP</b><span>·</span><span>20 yrs aerospace program management</span><span>·</span><span>BS Aerospace Engineering, Boston University</span><span>·</span><span>Bilingual EN/FR</span></div></div>
 </section>
 
 <!-- 03 SELECTED WORK -->
-<section class="sec" id="work" data-screen-label="03 Selected work">
+<section class="sec" id="work">
 <div class="gut"><span class="gnum">03</span><span class="gnote">selected work</span></div>
 <div class="pad">
 <p class="eyebrow">Selected work</p>
 <h2>Three projects, and the<br><em>constraint</em> each one had.</h2>
 <div class="cards">
-<a class="card rv" href="https://www.youtube.com/watch?v=RR4lcRtaKKU" data-video="RR4lcRtaKKU" target="_blank" rel="noopener">
-<div class="phwrap"><div class="arc"></div><div class="ph duo"><img src="assets/photos/new-neighbors-poster.webp" width="922" height="1046" loading="lazy" decoding="async" alt="New Neighbors poster — two people approaching a lit house at dusk"/><span class="tag">trailer · the new neighbors</span><span class="tag b">A-02</span><span class="playmark" aria-hidden="true"></span></div></div>
+<a class="card rv" href="new-neighbors.html">
+<div class="phwrap"><div class="arc"></div><div class="ph duo"><img src="assets/photos/new-neighbors-poster.webp" width="922" height="1046" loading="lazy" decoding="async" alt="New Neighbors poster — two people approaching a lit house at dusk"/><span class="tag">short film · the new neighbors</span><span class="tag b">A-02</span></div></div>
 <h3 class="ctitle">The New Neighbors</h3>
 <div class="slate"><span><b>Producer · Writer · Director · Editor</b></span><span>2025</span><span>Short · narrative</span><span>Post</span></div>
 </a>
-<a class="card rv" href="https://www.youtube.com/@tritonstudiosfl" target="_blank" rel="noopener">
+<a class="card rv" href="triton-studios.html">
 <div class="phwrap"><div class="arc"></div><div class="ph duo tr"><img src="assets/photos/triton-live-capture.webp" width="320" height="180" loading="lazy" decoding="async" alt="Hands on a grand piano lit in blue during a live capture session"/><span class="tag">still · nocturnal, live capture</span><span class="tag b">A-06</span></div></div>
 <h3 class="ctitle">Triton Studios</h3>
 <div class="slate"><span><b>Producer — brand &amp; live capture</b></span><span>2025—</span><span>Hollywood, FL</span><span>Ongoing</span></div>
 </a>
-<a class="card rv" href="https://www.youtube.com/watch?v=drUzmlHEMic&amp;t=27s" data-video="drUzmlHEMic" data-start="27" target="_blank" rel="noopener">
-<div class="phwrap"><div class="arc"></div><div class="ph duo"><img src="assets/photos/here-in-there.webp" width="1600" height="661" loading="lazy" decoding="async" alt="Girl holding a shell to her ear in a sunlit field"/><span class="tag">still · here in there</span><span class="tag b">A-07</span><span class="playmark" aria-hidden="true"></span></div></div>
-<h3 class="ctitle">Here in There</h3>
-<div class="slate"><span><b>G&amp;E Swing Grip</b></span><span>2026</span><span>LA Shorts '26 — Official Selection</span><span>Released</span></div>
+<a class="card rv" href="other-work.html">
+<div class="phwrap"><div class="arc"></div><div class="ph duo"><img src="assets/photos/here-in-there.webp" width="1600" height="661" loading="lazy" decoding="async" alt="Girl holding a shell to her ear in a sunlit field"/><span class="tag">still · here in there</span><span class="tag b">A-07</span></div></div>
+<h3 class="ctitle">Other work</h3>
+<div class="slate"><span><b>Gaffer · G&amp;E · Swing · PA · Editor</b></span><span>2022—</span><span>Shorts · series · commercial</span><span>5 yrs on set</span></div>
 </a>
 </div>
 <p class="crew"><svg class="cur" width="26" height="31" viewBox="0 0 10 12" aria-hidden="true" style="margin-top:4px"><g fill="#FF4E50"><rect x="1" y="0" width="1" height="10"/><rect x="2" y="1" width="1" height="8"/><rect x="3" y="2" width="1" height="7"/><rect x="4" y="3" width="1" height="6"/><rect x="5" y="4" width="1" height="5"/><rect x="6" y="5" width="1" height="3"/><rect x="4" y="9" width="1" height="2"/><rect x="5" y="10" width="1" height="2"/></g></svg><span>I still take crew calls — gaffer, G&amp;E, sound, AC — with people I like working with. It's the fastest way I know to keep learning how a set actually runs.</span></p>
@@ -332,34 +77,9 @@ footer::before{background-image:url("assets/constellation-cream.png");opacity:.2
 </div>
 </section>
 
-<!-- 04 METHOD -->
-<section class="sec method onNavy" data-screen-label="04 Built with margin">
-<div class="gut"><span class="gnum">04</span><span class="gnote">built with margin</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
-<div class="pad">
-<div class="marc"></div>
-<p class="eyebrow">The method</p>
-<h2>Built with margin.</h2>
-<p class="lede meas">Margin is an engineering word. It's the room you design in on purpose, so when something goes wrong — and it will — you're not out of runway. Most productions run with none.</p>
-<div class="steps">
-<div class="step rv"><span class="stepn">01</span><h3>Trade study</h3><p>Agree up front on what we're optimizing for and what we're willing to trade.</p></div>
-<div class="step rv"><span class="stepn">02</span><h3>Build plan</h3><p>One document everyone works from. Schedule, budget, crew, gear, contingencies.</p></div>
-<div class="step rv"><span class="stepn">03</span><h3>Debrief</h3><p>After wrap, write down what we learned so the next one costs less.</p></div>
-</div>
-<div class="setgrid">
-<div class="ph duo rv"><img src="assets/photos/set-camera-sound.webp" width="928" height="1252" loading="lazy" decoding="async" alt="Camera operator and boom operator setting up on a residential street"/></div>
-<div class="ph duo rv"><img src="assets/photos/set-video-village.webp" width="938" height="1254" loading="lazy" decoding="async" alt="Director at video village reviewing the shot list with headphones on"/></div>
-<div class="ph duo rv"><img src="assets/photos/set-monitor-note.webp" width="926" height="1254" loading="lazy" decoding="async" alt="Director pointing at a monitor showing a dinner table scene"/></div>
-<div class="ph duo rv"><img src="assets/photos/set-directing-kitchen.webp" width="1600" height="1159" loading="lazy" decoding="async" alt="Director giving notes from behind the kitchen counter"/></div>
-<div class="ph duo rv"><img src="assets/photos/set-dinner-scene.webp" width="1600" height="1193" loading="lazy" decoding="async" alt="Director adjusting a wine bottle on the dinner table with cast seated around it"/></div>
-<div class="ph duo rv"><img src="assets/photos/set-firepit-night.webp" width="1600" height="1187" loading="lazy" decoding="async" alt="Night exterior fire pit scene with two actors and a crew member at the monitor"/></div>
-</div>
-<p class="setcap">On set · The New Neighbors · Denver</p>
-</div>
-</section>
-
-<!-- 05 ABOUT -->
-<section class="sec" id="about" data-screen-label="05 About">
-<div class="gut"><span class="gnum">05</span><span class="gnote">about</span></div>
+<!-- 04 ABOUT -->
+<section class="sec" id="about">
+<div class="gut"><span class="gnum">04</span><span class="gnote">about</span></div>
 <div class="pad">
 <div class="bio">
 <div class="portwrap rv"><div class="arc"></div><div class="ph duo"><img src="assets/photos/qa-laughing-duo.jpg" width="760" height="570" loading="lazy" decoding="async" alt="Dave Mercuri laughing on stage beside a collaborator, festival titles projected behind them"/><span class="tag">q&amp;a · denver, 2026</span></div></div>
@@ -368,15 +88,15 @@ footer::before{background-image:url("assets/constellation-cream.png");opacity:.2
 <h2>Twenty years of<br><em>hard projects.</em></h2>
 <p class="lede meas">Here's what twenty years in aerospace actually gave me: I know how to keep a hard project from falling apart, and I know that the plan exists to protect the creative, not to replace it. Passion turbo-charges every skill you have and every one you haven't learned yet. I'd just rather it not also have to cover for a missing schedule.</p>
 <div class="creds">PMP — Project Management Professional<br>BS Aerospace Engineering — Boston University<br>Collins College — Digital Film Production coursework, Tempe AZ<br>2018 Project Execution Award — for raising a problem nobody wanted raised<br>Bilingual — English / French<br>Based Denver, CO · Works nationally</div>
-<p style="margin-top:30px"><a href="#">Read the whole story ⟶</a></p>
+<p style="margin-top:30px"><a href="about.html">Read the whole story ⟶</a></p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- 06 FIT -->
-<section class="sec" id="services" data-screen-label="06 Fit">
-<div class="gut"><span class="gnum">06</span><span class="gnote">fit</span></div>
+<!-- 05 FIT -->
+<section class="sec" id="fit">
+<div class="gut"><span class="gnum">05</span><span class="gnote">fit</span></div>
 <div class="pad">
 <p class="eyebrow">Who this is for</p>
 <h2>Fit matters more<br>than <em>availability.</em></h2>
@@ -384,34 +104,26 @@ footer::before{background-image:url("assets/constellation-cream.png");opacity:.2
 <div class="fitcol rv"><div class="fitlab"><span class="dots" style="width:22px;grid-template-columns:repeat(3,1fr);gap:3px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>Good fit</div><p>You have a vision, and you want someone to protect it from the schedule.</p></div>
 <div class="fitcol rv"><div class="fitlab" style="color:var(--navy)">Not a fit</div><p>You only care about the number. Or you only care about the shot. Those two end the same way.</p></div>
 </div>
+<p style="margin-top:34px"><a href="services.html">What I actually do ⟶</a></p>
 </div>
 </section>
 
-<!-- 07 CONTACT -->
-<section class="sec contact" id="contact" data-screen-label="07 Contact">
-<div class="gut"><span class="gnum">07</span><span class="gnote">contact</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+<!-- 06 CONTACT -->
+<section class="sec contact" id="contact">
+<div class="gut"><span class="gnum">06</span><span class="gnote">contact</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
 <div class="pad">
 <div class="cbars"><i></i><i></i><i></i></div>
 <p class="eyebrow">Contact</p>
 <h2 class="cbig">Coffee in Denver beats a call. But a call works.</h2>
-<div class="crow"><a class="btn" href="#">Start a conversation</a><a class="mailto" href="#">dave@mercurianstudios.com</a></div>
+<div class="crow"><a class="btn" href="contact.html">Start a conversation</a><a class="mailto" href="mailto:dave@mercurianstudios.com">dave@mercurianstudios.com</a></div>
 </div>
 </section>
-
-<footer><div class="gut"></div><div class="fin"><span>Mercurian Studios LLC · Denver, CO</span><span>Work · About · Services · Contact</span><span>LinkedIn · Instagram</span></div></footer>
+<footer><div class="gut"></div><div class="fin">
+<span>Mercurian Studios LLC · Denver, CO</span>
+<span><a href="index.html#work">Work</a> · <a href="about.html">About</a> · <a href="services.html">Services</a> · <a href="studio.html">Studio</a> · <a href="contact.html">Contact</a></span>
+<span><a href="mailto:dave@mercurianstudios.com">dave@mercurianstudios.com</a></span>
+</div></footer>
 
 <div class="lb" id="lb"><div class="frame"><button class="x" type="button" aria-label="Close video">Close ✕</button><div id="lbslot"></div></div></div>
-
-<script>
-var lb=document.getElementById('lb'),slot=document.getElementById('lbslot');
-function closeLb(){lb.removeAttribute('open');slot.innerHTML=''}
-document.querySelectorAll('[data-video]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();slot.innerHTML='<iframe src="https://www.youtube.com/embed/'+a.dataset.video+'?autoplay=1&rel=0'+(a.dataset.start?'&start='+a.dataset.start:'')+'" title="Trailer" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';lb.setAttribute('open','')})});
-lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('x'))closeLb()});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()});
-</script>
-<script>
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
-var rv=document.querySelectorAll('.rv');rv.forEach(function(el,i){el.style.transitionDelay=(i%3*60)+'ms';el.classList.add('armed');io.observe(el)});
-setTimeout(function(){rv.forEach(function(el){el.classList.add('in')})},1200);
-</script>
+<script src="assets/site.js"></script>
 </body></html>
